@@ -5,8 +5,10 @@
     <div class="panel-body">
 </div>
 <p>
+  <%=image_tag @pin.image.url(:medium)%><br/>
   <strong>Descrition:</strong>
-  <%= @pin.descrition %>
+  <%= @pin.descrition %><br/>
+  
 </p>
 <%if @pin.user == current_user %>
 <%= link_to 'Edit', edit_pin_path(@pin) %> |
